@@ -1,118 +1,51 @@
-# 📚 Sistema de Biblioteca
+PLANO DE AÇÃO: Sistema de Biblioteca com um Time de 5 Pessoas
+Objetivo: Desenvolver o Sistema de Biblioteca de forma organizada, aplicando as diretrizes de MVC e GitFlow para a entrega final da disciplina AP-1.
+Fase 1: Planejamento e Organização (Sprint 0)
+Definição de Papéis e Atribuição de Features:
+Líder do Projeto: Thales Marques
+Integrantes:
+Thales Marques: Feature 1 - Gerenciamento de Livros (CRUD de livros).
+Cristiano Herrera: Feature 2 - Gerenciamento de Usuários (Cadastro, Login).
+Gabriel Portuguez: Feature 3 - Gerenciamento de Exemplares (Adicionar cópias de um livro).
+Kayke Zago: Feature 4 - Gerenciamento de Empréstimos (Realizar e registrar empréstimos).
+Vinicius Simon: Feature 5 - Gerenciamento de Devoluções e Reservas.
+Definir Repositório Central e Limpeza:
 
-## 📖 Visão Geral do Projeto
-O **Sistema de Biblioteca** é uma aplicação web desenvolvida como parte da disciplina de **Engenharia de Software** da **Universidade Federal do Tocantins (UFT)**.  
-Seu objetivo é gerenciar livros, exemplares, empréstimos, devoluções, reservas e usuários, aplicando conceitos de **MVC (Model-View-Controller)** e boas práticas de versionamento com **GitFlow**.
+Repositório Central: Thales-uft2022-2/sistema-biblioteca.
+Limpeza Local: Todos os 5 alunos devem:
+Excluir qualquer pasta de projeto antiga de C:\xampp\htdocs\.
+Excluir o banco de dados maisaude ou qualquer pasta de seus phpMyAdmin.
+Verificar a instalação e funcionamento do XAMPP.
 
----
+Fase 2: Execução das Sprints (Desenvolvimento Incremental)
+O ciclo de desenvolvimento será repetido para cada uma das 5 funcionalidades, garantindo o registro no Gráfico de Rede do GitHub.
 
-## 🎯 Objetivo
-O projeto visa demonstrar a aplicação prática de conceitos de Engenharia de Software, enfatizando:  
-- Colaboração em equipe com **GitFlow**.  
-- Estruturação em **MVC**.  
-- Aplicação de requisitos funcionais e não funcionais reais.  
+Configuração e Estrutura Inicial (Responsabilidade do Líder - Thales Marques):
 
----
+Thales irá criar o repositório no GitHub: Thales-uft2022-2/sistema-biblioteca.
+Ele clonará este repositório em sua máquina.
+Ele criará a branch develop a partir da main.
+Ele fará o primeiro commit com a estrutura de pastas MVC (/controllers, /models, /views), e os arquivos base (index.php, config.php, Database.php, init_db.sql).
+Ele fará o push para as branches main e develop.
+A partir deste ponto, todos os outros membros do time podem clonar este repositório e começar a trabalhar.
+Sprint 1 (Desenvolvimento da Feature 2 - Cristiano Herrera):
+Cristiano Herrera irá:
+Clonar o repositório (Thales-uft2022-2/sistema-biblioteca).
+Fazer o checkout da develop e criar a branch de feature: git checkout -b feature/usuarios.
+Desenvolver o código completo (models, controllers, views) para a funcionalidade de gerenciamento de usuários.
+Fazer o git push da branch de feature para o GitHub.
+Verificação: Cristiano submeterá um "Pull Request" para mesclar a feature/usuarios na develop.
+Sprint 2 (Desenvolvimento da Feature 1 - Thales Marques):
 
-## 👥 Informações da Disciplina e Equipe
-- **Universidade:** Universidade Federal do Tocantins (UFT)  
-- **Curso:** Ciências da Computação  
-- **Disciplina:** Engenharia de Software  
-- **Semestre:** 2025/2  
-- **Professor:** Prof. Dr. Edeilson Milhomem Silva  
-
-### 👨‍💻 Integrantes
-- Thales Marques  
-- Cristian Herrera  
-- Gabriel Portuguez  
-- Kayke Zago  
-- Vinicus Simon  
-
----
-
-## ⚙️ Requisitos Funcionais (Principais)
-
-D1 🔑 Autenticação & Perfis
-- Login/Logout, recuperação de senha.  
-- Perfis: **Administrador**, **Bibliotecário**, **Leitor**.  
-- Controle de permissões por perfil.  
-
-D2 📚 Cadastro & Catálogo
-- CRUD de Livros (título, ISBN, edição, ano, editora, sinopse, capa).  
-- CRUD de Autores e Categorias.  
-- Relação **N:N** Livro–Autor e **1:N** Livro–Categoria.  
-- Cadastro de Exemplares (cópias físicas) com código de patrimônio.  
-- Importação de catálogo via CSV (opcional).  
-
-D3 🔄 Circulação
-- Empréstimos, devoluções, renovações.  
-- Reservas com fila de espera.  
-
-D4 💰 Multas & Regras
-- Configuração de prazos de empréstimo por perfil.  
-- Multa automática por atraso.  
-- Bloqueio de empréstimos com multas pendentes.  
-
-D5 👥 Usuários (Leitores)
-- Cadastro/edição de leitores.  
-- Histórico de empréstimos e reservas.  
-
-D6 🔎 Busca & Descoberta
-- Busca por título, autor, ISBN, categoria.  
-- Filtros por disponibilidade, período, categoria.  
-
-D7 📊 Relatórios
-- Livros mais emprestados.  
-- Empréstimos em andamento e atrasados.  
-- Multas abertas/quitadas.  
-- Usuários ativos x inativos.  
-
-D8 ⚙️ Administração
-- Gestão de perfis e usuários.  
-- Configuração de parâmetros (prazo, multa, limite).  
-- Log/Auditoria de ações críticas.  
-
----
-
-## 🛠️ Requisitos Não Funcionais
-- **Arquitetura:** MVC.  
-- **Banco:** MySQL (InnoDB, chaves estrangeiras, índices).  
-- **Acessibilidade:** WCAG AA, alto contraste, fontes escaláveis, navegação por teclado.  
-- **Segurança:** Senhas com `password_hash`, CSRF tokens, prepared statements.  
-- **Usabilidade:** Layout responsivo (mobile-first).  
-- **Logs:** erros, acessos e auditoria.  
-- **Backup:** rotinas SQL.  
-- **Internacionalização:** suporte pt-BR (datas e moedas).  
-- **Qualidade:** PHP linter e checklist de testes.  
-
----
-
-## 🗄️ Modelo de Dados (Principais Tabelas)
-- **users**(id, nome, email, senha_hash, papel, status, criado_em)  
-- **authors**(id, nome)  
-- **categories**(id, nome, slug)  
-- **publishers**(id, nome)  
-- **books**(id, titulo, isbn, ano, edicao, publisher_id, categoria_id, sinopse, capa_url)  
-- **book_authors**(book_id, author_id)  
-- **copies**(id, book_id, codigo_patrimonio, status)  
-- **loans**(id, copy_id, user_id, retirado_em, previsto_para, devolvido_em, status)  
-- **reservations**(id, book_id, user_id, criado_em, status, posicao_fila)  
-- **fines**(id, loan_id, valor_total, pago_em, status)  
-- **settings**(id, chave, valor)  
-- **logs**(id, user_id, acao, recurso, payload_json, criado_em)  
-
----
-
-## 🚀 Como Rodar o Projeto Localmente
-
-### 1. Pré-requisitos
-- **XAMPP** (Apache + MySQL).  
-- **PHP 8.0+** (integrado no XAMPP).  
-- **Git** instalado e configurado.  
-- **Navegador web** moderno.  
-
-### 2. Clonar o Repositório
-```bash
-cd C:\xampp\htdocs
-git clone https://github.com/ThalesTIPalmas/sistema-biblioteca.git
-cd sistema-biblioteca
+Thales irá:
+Fazer o git pull da develop para garantir que o código de Cristiano está em sua máquina.
+Criar a branch de feature: git checkout -b feature/livros.
+Desenvolver o código completo para o gerenciamento de livros.
+Fazer o git push da branch de feature e submeter um "Pull Request" para a develop.
+Próximas Sprints:
+O ciclo se repete para as funcionalidades 3, 4 e 5, com cada aluno trabalhando em sua respectiva branch de feature e fazendo o merge na develop.
+A cada ciclo, a branch develop se torna mais completa e o histórico no GitFlow se constrói de forma natural no Gráfico de Rede do GitHub.
+Fase 3: Finalização e Entrega
+Merge Final: Após todas as 5 features serem mescladas na develop, Thales (Líder) fará o merge final da develop na main para criar a versão estável (Release).
+Vídeo de Apresentação: O vídeo será gravado, com a participação de todos, demonstrando as 5 funcionalidades.
+README.md: O README.md será atualizado com a descrição do projeto, os nomes dos 5 integrantes e o link do vídeo.
