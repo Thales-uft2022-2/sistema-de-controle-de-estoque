@@ -1,64 +1,73 @@
-PLANO DE AÇÃO: Sistema de Biblioteca com um Time de 5 Pessoas
-Objetivo: Desenvolver o Sistema de Biblioteca de forma organizada, aplicando as diretrizes de MVC e GitFlow para a entrega final da disciplina AP-1.
-Fase 1: Planejamento e Organização (Sprint 0)
-Definição de Papéis e Atribuição de Features:
+Plano de Ação – Sistema de Biblioteca (Equipe com 5 Pessoas)
+Objetivo: Desenvolver o Sistema de Biblioteca aplicando MVC e GitFlow, entregando uma versão estável e organizada para a disciplina AP-1.
+
+Equipe e Responsabilidades
 
 Líder do Projeto: Thales Marques
-Integrantes:
 
-Thales Marques: Feature 1 - Gerenciamento de Livros (CRUD de livros).
+Criar e configurar o repositório central no GitHub (Thales-uft2022-2/sistema-biblioteca).
+Montar a estrutura inicial do projeto (MVC + arquivos base).
+Manter a organização das branches (main, develop, feature/*).
+Revisar Pull Requests antes de mesclar na develop.
+Desenvolver a Feature 1 - Gerenciamento de Livros (CRUD de livros).
+Conduzir o merge final da develop para a main (release estável).
+Atualizar o README.md com informações finais do projeto e vídeo.
 
-Cristiano Herrera: Feature 2 - Gerenciamento de Usuários (Cadastro, Login).
+Cristiano Herrera
+Desenvolver a Feature 2 - Gerenciamento de Usuários (Cadastro e Login).
+Criar e programar os models, controllers e views da funcionalidade.
+Implementar validações de cadastro e autenticação de login.
+Trabalhar na branch feature/usuarios e abrir Pull Request para develop.
+Garantir testes básicos da funcionalidade antes da integração.
 
-Gabriel Portuguez: Feature 3 - Gerenciamento de Exemplares (Adicionar cópias de um livro).
+Gabriel Portuguez
+Desenvolver a Feature 3 - Gerenciamento de Exemplares (Adicionar cópias de livros).
+Criar os models, controllers e views para cadastrar exemplares de livros.
+Implementar atributos como número de tombo, estado de conservação e disponibilidade.
+Assegurar que um mesmo livro pode ter múltiplos exemplares registrados.
+Trabalhar na branch feature/exemplares e abrir Pull Request para develop.
 
-Kayke Zago: Feature 4 - Gerenciamento de Empréstimos (Realizar e registrar empréstimos).
+Kayke Zago
+Desenvolver a Feature 4 - Gerenciamento de Empréstimos.
+Criar as telas e lógica para realizar e registrar empréstimos de exemplares.
+Integrar empréstimos com o status de disponibilidade dos exemplares.
+Trabalhar na branch feature/emprestimos e abrir Pull Request para develop.
+Validar conflitos de reserva x empréstimo.
 
-Vinicius Simon: Feature 5 - Gerenciamento de Devoluções e Reservas.
+Vinicius Simon
+Desenvolver a Feature 5 - Gerenciamento de Devoluções e Reservas.
+Implementar a lógica de controle de devolução de exemplares.
+Criar mecanismo para reservar exemplares indisponíveis.
+Atualizar automaticamente o status do exemplar após devolução.
+Trabalhar na branch feature/devolucoes-reservas e abrir Pull Request para develop.
 
-Definir Repositório Central e Limpeza:
+Fases do Projeto
 
-Repositório Central: Thales-uft2022-2/sistema-biblioteca.
-Limpeza Local: Todos os 5 alunos devem:
-Excluir qualquer pasta de projeto antiga de C:\xampp\htdocs\.
-Excluir o banco de dados maisaude ou qualquer pasta de seus phpMyAdmin.
-Verificar a instalação e funcionamento do XAMPP.
+Fase 1 – Planejamento (Sprint 0)
+Definição dos papéis e features de cada integrante.
+Criação do repositório central (Thales).
+Limpeza local de ambientes (xampp/htdocs e banco antigo).
+Testar funcionamento do XAMPP em todas as máquinas.
 
-Fase 2: Execução das Sprints (Desenvolvimento Incremental)
-O ciclo de desenvolvimento será repetido para cada uma das 5 funcionalidades, garantindo o registro no Gráfico de Rede do GitHub.
+Fase 2 – Execução das Sprints
+Cada integrante trabalha em sua branch de feature.
+Seguir ordem das sprints:
+Sprint 1: Feature 2 – Usuários (Cristiano).
+Sprint 2: Feature 1 – Livros (Thales).
+Sprint 3: Feature 3 – Exemplares (Gabriel).
+Sprint 4: Feature 4 – Empréstimos (Kayke).
+Sprint 5: Feature 5 – Devoluções e Reservas (Vinicius).
 
-Configuração e Estrutura Inicial (Responsabilidade do Líder - Thales Marques):
+Cada Pull Request deve ser revisado pelo líder antes do merge.
 
-Thales irá criar o repositório no GitHub: Thales-uft2022-2/sistema-biblioteca.
+Fase 3 – Finalização e Entrega
+Merge final da develop na main (Thales).
+Gravação do vídeo de apresentação com participação de todos os integrantes.
+Atualização do README.md com:
 
-Ele clonará este repositório em sua máquina.
+Descrição do projeto.
 
-Ele criará a branch develop a partir da main.
-
-Ele fará o primeiro commit com a estrutura de pastas MVC (/controllers, /models, /views), e os arquivos base (index.php, config.php, Database.php, init_db.sql).
-
-Ele fará o push para as branches main e develop.
-
-A partir deste ponto, todos os outros membros do time podem clonar este repositório e começar a trabalhar.
-
-Sprint 1 (Desenvolvimento da Feature 2 - Cristiano Herrera):
-Cristiano Herrera irá:
-Clonar o repositório (Thales-uft2022-2/sistema-biblioteca).
-Fazer o checkout da develop e criar a branch de feature: git checkout -b feature/usuarios.
-Desenvolver o código completo (models, controllers, views) para a funcionalidade de gerenciamento de usuários.
-Fazer o git push da branch de feature para o GitHub.
-Verificação: Cristiano submeterá um "Pull Request" para mesclar a feature/usuarios na develop.
-Sprint 2 (Desenvolvimento da Feature 1 - Thales Marques):
-
-Thales irá:
-Fazer o git pull da develop para garantir que o código de Cristiano está em sua máquina.
-Criar a branch de feature: git checkout -b feature/livros.
-Desenvolver o código completo para o gerenciamento de livros.
-Fazer o git push da branch de feature e submeter um "Pull Request" para a develop.
-Próximas Sprints:
-O ciclo se repete para as funcionalidades 3, 4 e 5, com cada aluno trabalhando em sua respectiva branch de feature e fazendo o merge na develop.
-A cada ciclo, a branch develop se torna mais completa e o histórico no GitFlow se constrói de forma natural no Gráfico de Rede do GitHub.
-Fase 3: Finalização e Entrega
-Merge Final: Após todas as 5 features serem mescladas na develop, Thales (Líder) fará o merge final da develop na main para criar a versão estável (Release).
-Vídeo de Apresentação: O vídeo será gravado, com a participação de todos, demonstrando as 5 funcionalidades.
-README.md: O README.md será atualizado com a descrição do projeto, os nomes dos 5 integrantes e o link do vídeo.
+Nome dos integrantes.
+Link do vídeo.
+Assim, cada membro da equipe tem uma responsabilidade clara e delimitada, e o fluxo de desenvolvimento segue o GitFlow corretamente.
+Quer que eu organize esse plano em formato de tabela visual (integrante x responsabilidades x entregáveis), para ficar ainda mais fácil de acompanhar?
