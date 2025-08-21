@@ -2,13 +2,20 @@ PLANO DE AÇÃO: Sistema de Biblioteca com um Time de 5 Pessoas
 Objetivo: Desenvolver o Sistema de Biblioteca de forma organizada, aplicando as diretrizes de MVC e GitFlow para a entrega final da disciplina AP-1.
 Fase 1: Planejamento e Organização (Sprint 0)
 Definição de Papéis e Atribuição de Features:
+
 Líder do Projeto: Thales Marques
 Integrantes:
+
 Thales Marques: Feature 1 - Gerenciamento de Livros (CRUD de livros).
+
 Cristiano Herrera: Feature 2 - Gerenciamento de Usuários (Cadastro, Login).
+
 Gabriel Portuguez: Feature 3 - Gerenciamento de Exemplares (Adicionar cópias de um livro).
+
 Kayke Zago: Feature 4 - Gerenciamento de Empréstimos (Realizar e registrar empréstimos).
+
 Vinicius Simon: Feature 5 - Gerenciamento de Devoluções e Reservas.
+
 Definir Repositório Central e Limpeza:
 
 Repositório Central: Thales-uft2022-2/sistema-biblioteca.
@@ -23,11 +30,17 @@ O ciclo de desenvolvimento será repetido para cada uma das 5 funcionalidades, g
 Configuração e Estrutura Inicial (Responsabilidade do Líder - Thales Marques):
 
 Thales irá criar o repositório no GitHub: Thales-uft2022-2/sistema-biblioteca.
+
 Ele clonará este repositório em sua máquina.
+
 Ele criará a branch develop a partir da main.
+
 Ele fará o primeiro commit com a estrutura de pastas MVC (/controllers, /models, /views), e os arquivos base (index.php, config.php, Database.php, init_db.sql).
+
 Ele fará o push para as branches main e develop.
+
 A partir deste ponto, todos os outros membros do time podem clonar este repositório e começar a trabalhar.
+
 Sprint 1 (Desenvolvimento da Feature 2 - Cristiano Herrera):
 Cristiano Herrera irá:
 Clonar o repositório (Thales-uft2022-2/sistema-biblioteca).
