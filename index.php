@@ -1,4 +1,17 @@
 <?php
+require_once 'controllers/ReservationController.php';
+require_once 'controllers/ReturnController.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if ($_GET['action'] === 'reserva') {
+        $controller = new ReservationController();
+        $controller->create($_POST['book_id'], $_POST['user_id']);
+    }
+    if ($_GET['action'] === 'devolver') {
+        $controller = new ReturnController();
+        $controller->devolver($_POST['loan_id']);
+    }
+}
 // index.php - Roteador principal da aplicação
 
 // Configurações para a exibição de erros (útil durante o desenvolvimento)
