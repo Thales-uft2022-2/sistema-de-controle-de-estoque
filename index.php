@@ -1,8 +1,6 @@
 <?php
 // index.php - Roteador principal da aplicação
 
-session_start(); //criando a seção
-
 // Configurações para a exibição de erros (útil durante o desenvolvimento)
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
