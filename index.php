@@ -35,6 +35,16 @@ switch ($route) {
             echo "Ação do controlador 'usuario' não encontrada.";
         }
         break;
+    case 'emprestimo':
+        require_once __DIR__ . '/controllers/EmprestimoController.php';
+        $controller = new EmprestimoController();
+        if (method_exists($controller, $action)) {
+            $controller->$action();
+        } else {
+            echo "Ação do controlador 'emprestimo' não encontrada.";
+        }
+        break;
+
     // Adicionar outras rotas para as outras funcionalidades aqui
     // Ex: case 'emprestimo': ...
     // Ex: case 'exemplar': ...
